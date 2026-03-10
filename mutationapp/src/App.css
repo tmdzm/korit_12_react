@@ -1,0 +1,203 @@
+/* #root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+} */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Pretendard', sans-serif;
+}
+
+body{
+  background: linear-gradient(135deg,#f5f7fa,#e4ecff);
+  min-height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:flex-start;
+  padding:40px;
+}
+
+div{
+  width:100%;
+}
+
+header{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+header h1{
+  font-size:2rem;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  color:#333;
+}
+
+header p{
+  margin-top:5px;
+  color:#777;
+}
+
+/* 카드 스타일 */
+section{
+  background:white;
+  padding:25px;
+  border-radius:16px;
+  margin-bottom:25px;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* 입력 폼 */
+
+form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
+
+label{
+  font-size:0.9rem;
+  color:#555;
+  margin-bottom:4px;
+}
+
+input,
+textarea{
+  width:100%;
+  padding:10px;
+  border-radius:8px;
+  border:1px solid #ddd;
+  font-size:0.95rem;
+  transition:all 0.2s;
+}
+
+input:focus,
+textarea:focus{
+  outline:none;
+  border-color:#6a8cff;
+  box-shadow:0 0 0 3px rgba(106,140,255,0.15);
+}
+
+/* 버튼 */
+
+button{
+  margin-top:10px;
+  padding:12px;
+  border:none;
+  border-radius:10px;
+  background:linear-gradient(135deg,#6a8cff,#7b5cff);
+  color:white;
+  font-weight:600;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  cursor:pointer;
+  transition:all 0.25s;
+}
+
+button:hover{
+  transform:translateY(-2px);
+  box-shadow:0 8px 20px rgba(100,120,255,0.3);
+}
+
+button:disabled{
+  opacity:0.6;
+  cursor:not-allowed;
+}
+
+/* 포스트 리스트 */
+
+h2{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-bottom:15px;
+}
+
+section div > div{
+  background:#f8f9ff;
+  padding:15px;
+  border-radius:10px;
+  margin-bottom:12px;
+  transition:all 0.2s;
+  border:1px solid transparent;
+}
+
+section div > div:hover{
+  border-color:#6a8cff;
+  transform:translateY(-2px);
+}
+
+span{
+  font-size:0.8rem;
+  color:#888;
+}
+
+h3{
+  margin:6px 0;
+  font-size:1.1rem;
+  color:#333;
+}
+
+p{
+  color:#555;
+  font-size:0.9rem;
+}
+
+/* 로딩 애니메이션 */
+
+svg{
+  animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+  from{
+    transform:rotate(0deg);
+  }
+  to{
+    transform:rotate(360deg);
+  }
+}
