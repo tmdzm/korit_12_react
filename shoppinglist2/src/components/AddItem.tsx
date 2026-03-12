@@ -28,14 +28,15 @@ export default function AddItem(props : AddItemProps){//props
   const handleSet = (e: React.ChangeEvent<HTMLInputElement>) => {
     setItem({
       ...item,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value // 이건 뭐길래 string도 number에 그냥 들어가지
     });
   };
 //e.target.value를 그냥 쓰면 string 자료형인것을 기억하라
+//밑의 스타일의 경우 , 원랜 ;로 끝나지만, 저건 객체라서 ''로 적어줬다.
   return(
     <>
-      <Button onClick={handleOpen} variant="outliend">Add Item</Button>
-      <Dialog open={open} onClose={handleClose}>
+      <Button variant="outliend"  onClick={handleOpen} style={{marginTop: '5px'}}>항목 추가</Button>
+      <Dialog open={open} onClose={handleClose}> {/*onClick이 아닌ㄴ것에 주의 */}
         <DialogTitle>New Item</DialogTitle>
         <DialogContent>
           <TextField value={item.product} label='Product' margin="dense" fullWidth 
@@ -57,10 +58,10 @@ export default function AddItem(props : AddItemProps){//props
           </TextField>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>
+          <Button variant="outlined" onClick={handleClose}>
             Cancel
           </Button>
-          <Button onClick={addItem}>
+          <Button variant="outlined" onClick={addItem}>
             Add
           </Button>
         </DialogActions>
